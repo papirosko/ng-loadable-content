@@ -1,5 +1,6 @@
 .idea
 .eslintrc.js
+coverage
 test
 jest.config.ts
 package-lock.json
