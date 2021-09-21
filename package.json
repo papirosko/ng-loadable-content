@@ -1,6 +1,6 @@
 {
   "name": "ng-loadable-content",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Loadable Content monad and angular pipes for using it",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "prebuild": "npm run clean && npm run lint",
     "test": "jest",
     "compile": "tsc",
-    "build": "ng build --prod"
+    "build": "ng build"
   },
   "repository": {
     "type": "git",
@@ -37,10 +37,10 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "scats": ">=1.0.32",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "scats": ">=1.0.32",
     "@angular/core": ">9.0.0"
   }
 }
