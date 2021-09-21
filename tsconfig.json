@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2020",
     "declaration": true,
     "strict": true,
     "baseUrl": "./",
@@ -8,10 +8,19 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "target": "ES2015",
+    "paths": {
+      "ng-loadable-content": [
+        "dist"
+      ]
+    },
+    "target": "es2017",
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "types": [
       "node",
       "jest"
@@ -25,5 +34,12 @@
   ],
   "exclude": [
     "./src/**/*.test.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "enableIvy": false
+  }
 }
