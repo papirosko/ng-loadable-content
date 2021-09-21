@@ -12,8 +12,16 @@
     "compile": "tsc",
     "build": "npm run compile"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papirosko/ng-loadable-content"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papirosko/ng-loadable-content/issues"
+  },
+  "homepage": "https://github.com/papirosko/ng-loadable-content#readme",
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "4.31.2",
