@@ -42,5 +42,11 @@
   },
   "peerDependencies": {
     "@angular/core": ">9.0.0"
-  }
+  },
+  "keywords": [
+    "angular",
+    "loader",
+    "monad",
+    "pipe"
+  ]
 }
