@@ -7,7 +7,7 @@ import {LoadableContent} from './loadable-content';
 export class LoadErrorPipe implements PipeTransform {
 
     transform<T>(value: LoadableContent<T> | null): boolean {
-        return !!value && value.isError;
+        return !!value && value.hasError;
     }
 
 }

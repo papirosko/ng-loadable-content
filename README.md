@@ -139,3 +139,36 @@ export class ObjectComponent {
 
 }
 ```
+
+
+The loadable content can be transformed to loading and error state preserving its value. This can be
+useful when you want to show the loader above the content (e.g. table), but do not want the content 
+to disappear.
+
+```typescript
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
+import {LoadableContent} from 'ng-loadable-content';
+
+@Injectable()
+export class ObjectStore {
+
+    private readonly _state = new BehaviorSubject<LoadableContent<Dto>>(LoadableContent.initial());
+    readonly state$ = this._state.asObservable();
+
+    constructor(private readonly remoteService: RemoteService) {
+    }
+
+    reload() {
+        const current = this._state.value;
+        this._state.next(current.toLoadingState);
+        this.remoteService.loadObject()
+            .subscribe(
+                res => this._state.next(LoadableContent.loaded(res)),
+                e => this._state.next(current.toErrorState(e))
+            );
+    }
+
+}
+```
+

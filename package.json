@@ -1,6 +1,6 @@
 {
   "name": "ng-loadable-content",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Loadable Content monad and angular pipes for using it",
   "main": "dist/index.js",
   "scripts": {

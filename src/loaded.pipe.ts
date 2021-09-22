@@ -7,7 +7,7 @@ import {LoadableContent} from './loadable-content';
 export class LoadedPipe implements PipeTransform {
 
     transform<T>(value: LoadableContent<T> | null): T | null {
-        return value && value.isLoaded ? value.value.orNull : null;
+        return value && value.loaded ? value.value.orNull : null;
     }
 
 }

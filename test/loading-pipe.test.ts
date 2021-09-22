@@ -1,4 +1,4 @@
-import {LoadableContent, LoadingPipe} from '../src';
+import {LoadableContent, LoadingPipe} from '../src/public-api';
 
 describe('Loading Pipe', () => {
 

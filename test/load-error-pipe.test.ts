@@ -1,4 +1,4 @@
-import {LoadableContent, LoadErrorPipe} from '../src';
+import {LoadableContent, LoadErrorPipe} from '../src/public-api';
 
 describe('LoadError Pipe', () => {
 

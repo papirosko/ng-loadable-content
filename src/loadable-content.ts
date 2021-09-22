@@ -19,20 +19,28 @@ export class LoadableContent<T> {
         );
     }
 
-    get isInitial(): boolean {
+    get initial(): boolean {
         return this.status === LoadStatus.Empty;
     }
 
-    get isLoading(): boolean {
+    get loading(): boolean {
         return this.status === LoadStatus.Loading;
     }
 
-    get isLoaded(): boolean {
+    get loaded(): boolean {
         return this.status === LoadStatus.Loaded;
     }
 
-    get isError(): boolean {
+    get hasError(): boolean {
         return this.status === LoadStatus.Error;
+    }
+
+    get toLoadingState(): LoadableContent<T> {
+        return new LoadableContent(this.value, this.error, LoadStatus.Loading);
+    }
+
+    toErrorState(error: unknown): LoadableContent<T> {
+        return new LoadableContent(this.value, some(error), LoadStatus.Error);
     }
 
     static initial(): LoadableContent<any> {

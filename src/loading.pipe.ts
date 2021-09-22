@@ -7,7 +7,7 @@ import {LoadableContent} from './loadable-content';
 export class LoadingPipe implements PipeTransform {
 
     transform<T>(value: LoadableContent<T> | null): boolean {
-        return !!value && value.isLoading;
+        return !!value && value.loading;
     }
 
 }
