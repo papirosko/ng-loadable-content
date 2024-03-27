@@ -106,3 +106,5 @@ dist
 
 .idea
 *.iml
+.angular
+package-lock.json
